@@ -11,8 +11,41 @@ ET:
         fmax:             2048.
         spacing:          geometric
         df:               1./16.
-        npoints:          1000   
-        arm_length:       10000           
+        npoints:          1000
+        arm_length:       10000
+# ET 2L configuration: Sardinia (ET_Sar) + Meuse-Rhine (ET_EMR)
+# Geometry matches bilby's ET_Sar.interferometer and ET_EMR.interferometer.
+# PSD: ET-CoBA 15km design curve (same as bilby noise_curves/ET_CoBA_15km.txt).
+ET_Sar:
+        lat:              (40 + 31. / 60 + 0. / 3600) * np.pi / 180.
+        lon:              (9 + 25. / 60 + 0. / 3600) * np.pi / 180.
+        opening_angle:    np.pi / 2.
+        azimuth:          70.5674 * np.pi / 180.
+        psd_data:         ET_CoBA_15km_psd.txt
+        duty_factor:      0.85
+        detector_class:   earthL
+        plotrange:        3, 1000, 1e-25, 1e-20
+        fmin:             2.
+        fmax:             2048.
+        spacing:          geometric
+        df:               1./16.
+        npoints:          1000
+        arm_length:       15000
+ET_EMR:
+        lat:              (50 + 43. / 60 + 23. / 3600) * np.pi / 180.
+        lon:              (5 + 55. / 60 + 14. / 3600) * np.pi / 180.
+        opening_angle:    np.pi / 2.
+        azimuth:          25.5674 * np.pi / 180.
+        psd_data:         ET_CoBA_15km_psd.txt
+        duty_factor:      0.85
+        detector_class:   earthL
+        plotrange:        3, 1000, 1e-25, 1e-20
+        fmin:             2.
+        fmax:             2048.
+        spacing:          geometric
+        df:               1./16.
+        npoints:          1000
+        arm_length:       15000
 VOY:
         lat:              46.5 * np.pi / 180.
         lon:              -119.4 * np.pi / 180.
