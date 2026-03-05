@@ -3,7 +3,7 @@ ET:
         lon:              (9 + 25. / 60) * np.pi / 180.
         opening_angle:    np.pi / 3.
         azimuth:          70.5674 * np.pi / 180.
-        psd_data:         ET_psd.txt
+        psd_data:         ET_CoBA_10km_psd.txt
         duty_factor:      0.85
         detector_class:   earthDelta
         plotrange:        3, 1000, 1e-25, 1e-20
